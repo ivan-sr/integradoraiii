@@ -8,41 +8,18 @@ import {Card, Button, Icon} from 'react-native-elements';
 import Img1 from '../assets/dsoftware.jpg';
 import Img2 from '../assets/card2.jpg';
 import Img3 from '../assets/card3.jpg';
+/* <Text style={styles.appText}>Hola! {user.name} </Text> */
 
-
-const HomeScreen = () => {
+const HomeGoogle = () => {
   const navigation = useNavigation()
-
-  const handleSignOut = () => {
-    auth
-      .signOut()
-      .then(() => {
-        navigation.replace("Login")
-      })
-      .catch(error => alert(error.message))
-  }
-
-  const [userInfo, setUserInfo] = useState([]);
-
-  
-  db.collection("users")
-  .doc(auth.currentUser.uid)
-  .get()
-  .then((snapshot) => {
-    if (snapshot.exists)
-    {setUserInfo(snapshot.data())
-    }
-  })
-
 
   return (
     <ScrollView style={styles.container}>
       <CarouselCards/>
       <Text style={styles.appTitles}>Bienvenid@ a</Text>
       <Text style={styles.appTitles1}>DevanceSoft</Text>
-      <Text style={styles.appText}>Hola! {userInfo.Nombre} </Text>
+
       <TouchableOpacity
-        onPress={handleSignOut}
         style={styles.button}
       >
         <Text style={styles.buttonText}>Cerrar sesión</Text>
@@ -92,7 +69,7 @@ const HomeScreen = () => {
 }
 
 
-export default HomeScreen
+export default HomeGoogle
 
 const styles = StyleSheet.create({
   container: {
