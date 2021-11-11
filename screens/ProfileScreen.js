@@ -12,7 +12,7 @@ const ProfileScreen = ({ route, navigation }) => {
       <Text>Welcome {user.name} !</Text>
       <Button
         title="Home Screen"
-        onPress={() => navigation.navigate('Home Google')}
+        onPress={() => navigation.navigate('Home')}
       />
     </View>
   );

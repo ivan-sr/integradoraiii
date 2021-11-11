@@ -59,7 +59,7 @@ const HomeScreen = () => {
               Manejamos herramientas de desarrollo 3D como Unity & Blender!    
           </Text>    
           <Card.Divider/>  
-            <Button icon={<Icon name='code' color='#ffffff' />} buttonStyle={{borderRadius: 20, marginLeft: 10, marginRight: 10, marginBottom: 0, backgroundColor: '#222831'}} title='Ver más' />  
+            <Button icon={<Icon name='code' color='#ffffff' />} buttonStyle={{borderRadius: 20, marginLeft: 10, marginRight: 10, marginBottom: 0, backgroundColor: '#222831'}} title='Ver más' onPress={() => navigation.navigate("Game")} />  
         </Card>
         <Card>  
           <Card.Title>
@@ -134,5 +134,5 @@ const styles = StyleSheet.create({
     color: 'white',
     paddingBottom: '6%',
     paddingLeft: '24%',
-  }
+  },
 })
