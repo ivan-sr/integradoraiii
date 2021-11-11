@@ -19,11 +19,6 @@ const HomeGoogle = () => {
       <Text style={styles.appTitles}>Bienvenid@ a</Text>
       <Text style={styles.appTitles1}>DevanceSoft</Text>
 
-      <TouchableOpacity
-        style={styles.button}
-      >
-        <Text style={styles.buttonText}>Cerrar sesión</Text>
-        </TouchableOpacity>
         <Text>{'\n'}</Text>
         <Card>  
           <Card.Title>
@@ -36,7 +31,7 @@ const HomeGoogle = () => {
               Manejamos herramientas de desarrollo 3D como Unity & Blender!    
           </Text>    
           <Card.Divider/>  
-            <Button icon={<Icon name='code' color='#ffffff' />} buttonStyle={{borderRadius: 20, marginLeft: 10, marginRight: 10, marginBottom: 0, backgroundColor: '#222831'}} title='Ver más' />  
+            <Button icon={<Icon name='code' color='#ffffff' />} buttonStyle={{borderRadius: 20, marginLeft: 10, marginRight: 10, marginBottom: 0, backgroundColor: '#222831'}} title='Ver más' onPress={() => navigation.navigate("Game Google")} />  
         </Card>
         <Card>  
           <Card.Title>
@@ -49,7 +44,7 @@ const HomeGoogle = () => {
               Desarrollo de hermosas interfaces funcionales con ayuda de tecnologías como HTML5, CSS3, JavaScript, Bootstrap, React, Firebase, etc.    
             </Text>    
           <Card.Divider/>  
-            <Button icon={<Icon name='code' color='#ffffff' />} buttonStyle={{borderRadius: 20, marginLeft: 10, marginRight: 10, marginBottom: 0, backgroundColor: '#222831'}} title='Ver más' />  
+            <Button icon={<Icon name='code' color='#ffffff' />} buttonStyle={{borderRadius: 20, marginLeft: 10, marginRight: 10, marginBottom: 0, backgroundColor: '#222831'}} title='Ver más'  />  
         </Card>
         <Card>  
           <Card.Title>

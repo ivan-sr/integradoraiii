@@ -5,12 +5,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
-import GameScreen from './screens/GameScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import LoginGoogle from './screens/LoginGoogle';
 import ProfileScreen from './screens/ProfileScreen';
+import HomeGoogle from './screens/HomeGoogle';
 import firebase from './firebase';
 import { LogBox } from 'react-native';
+import GameScreen from './screens/GameScreen';
+import GameGoogle from './screens/GameGoogle';
 // import { useNavigation } from '@react-navigation/core'
 
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
@@ -27,10 +29,12 @@ export default function App() {
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen options={{ headerShown: false }} name="Login" component={LoginScreen} />
         <Stack.Screen options={{ headerShown: false }} name="Home" component={HomeScreen} />
-        <Stack.Screen options={{ headerShown: false }} name="Game" component={GameScreen} />
         <Stack.Screen options={{ headerShown: false }} name="Register" component={RegisterScreen}/>
         <Stack.Screen options={{ headerShown: false }} name="Login Google" component={LoginGoogle} />
         <Stack.Screen options={{ headerShown: false }} name="Profile Google" component={ProfileScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="Home Google" component={HomeGoogle} />
+        <Stack.Screen options={{ headerShown: false }} name="Game" component={GameScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="Game Google" component={GameGoogle} />
       </Stack.Navigator>
     </NavigationContainer>
   );
