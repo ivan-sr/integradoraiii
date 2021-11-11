@@ -18,13 +18,25 @@ const HomeScreen = () => {
       .catch(error => alert(error.message))
   }
 
+  const [userInfo, setUserInfo] = useState([]);
+
+  
+  db.collection("users")
+  .doc(auth.currentUser.uid)
+  .get()
+  .then((snapshot) => {
+    if (snapshot.exists)
+    {setUserInfo(snapshot.data())
+    }
+  })
+
 
   return (
     <ScrollView style={styles.container}>
       <CarouselCards/>
       <Text style={styles.appTitles}>Bienvenid@ a</Text>
       <Text style={styles.appTitles1}>DevanceSoft</Text>
-      <Text style={styles.appText}>Email: {auth.currentUser?.email}</Text>
+      <Text style={styles.appText}>Hola! {userInfo.Nombre} </Text>
       <TouchableOpacity
         onPress={handleSignOut}
         style={styles.button}
