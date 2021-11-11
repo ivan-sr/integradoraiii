@@ -72,7 +72,7 @@ const HomeScreen = () => {
               Desarrollo de hermosas interfaces funcionales con ayuda de tecnologías como HTML5, CSS3, JavaScript, Bootstrap, React, Firebase, etc.    
             </Text>    
           <Card.Divider/>  
-            <Button icon={<Icon name='code' color='#ffffff' />} buttonStyle={{borderRadius: 20, marginLeft: 10, marginRight: 10, marginBottom: 0, backgroundColor: '#222831'}} title='Ver más' />  
+            <Button onPress={() => navigation.navigate("Development")} icon={<Icon name='code' color='#ffffff' />} buttonStyle={{borderRadius: 20, marginLeft: 10, marginRight: 10, marginBottom: 0, backgroundColor: '#222831'}} title='Ver más' />  
         </Card>
         <Card>  
           <Card.Title>
