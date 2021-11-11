@@ -9,8 +9,11 @@ import RegisterScreen from './screens/RegisterScreen';
 import LoginGoogle from './screens/LoginGoogle';
 import ProfileScreen from './screens/ProfileScreen';
 import firebase from './firebase';
+import { LogBox } from 'react-native';
 // import { useNavigation } from '@react-navigation/core'
 
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs();//Ignore all log notifications
 
 const Stack = createNativeStackNavigator();
 

@@ -4,6 +4,10 @@ import { StyleSheet, Text, TouchableOpacity, View, ScrollView } from 'react-nati
 import { useEffect, useState } from 'react/cjs/react.development'
 import { auth,db } from '../firebase'
 import CarouselCards from './CarouselCards'
+import {Card, Button, Icon} from 'react-native-elements';
+import Img1 from '../assets/dsoftware.jpg';
+import Img2 from '../assets/card2.jpg';
+import Img3 from '../assets/card3.jpg';
 
 
 const HomeScreen = () => {
@@ -41,9 +45,48 @@ const HomeScreen = () => {
         onPress={handleSignOut}
         style={styles.button}
       >
-        <Text style={styles.buttonText}>Sign out</Text>
+        <Text style={styles.buttonText}>Cerrar sesión</Text>
         </TouchableOpacity>
         <Text>{'\n'}</Text>
+        <Card>  
+          <Card.Title>
+            Desarrollo de Videojuegos
+          </Card.Title>
+          <Card.Divider/>  
+          <Card.Image source={Img2}/>
+          <Card.Divider/>  
+          <Text style={{marginBottom: 10, color:'#483434'}}>
+              Manejamos herramientas de desarrollo 3D como Unity & Blender!    
+          </Text>    
+          <Card.Divider/>  
+            <Button icon={<Icon name='code' color='#ffffff' />} buttonStyle={{borderRadius: 20, marginLeft: 10, marginRight: 10, marginBottom: 0, backgroundColor: '#222831'}} title='Ver más' />  
+        </Card>
+        <Card>  
+          <Card.Title>
+            Desarrollo Web & Móvil
+          </Card.Title>
+          <Card.Divider/>  
+          <Card.Image source={Img1}/>    
+          <Card.Divider/>  
+          <Text style={{marginBottom: 10, color:'#483434'}}>
+              Desarrollo de hermosas interfaces funcionales con ayuda de tecnologías como HTML5, CSS3, JavaScript, Bootstrap, React, Firebase, etc.    
+            </Text>    
+          <Card.Divider/>  
+            <Button icon={<Icon name='code' color='#ffffff' />} buttonStyle={{borderRadius: 20, marginLeft: 10, marginRight: 10, marginBottom: 0, backgroundColor: '#222831'}} title='Ver más' />  
+        </Card>
+        <Card>  
+          <Card.Title>
+            Curso de Metodologías
+          </Card.Title>
+          <Card.Divider/>  
+          <Card.Image source={Img3}/>    
+          <Card.Divider/>  
+          <Text style={{marginBottom: 10, color:'#483434'}}>
+              Capacitación en metodología de desarrollo ágil SCRUM a través de nuestro curso!    
+            </Text>    
+          <Card.Divider/>  
+            <Button icon={<Icon name='code' color='#ffffff' />} buttonStyle={{borderRadius: 20, marginLeft: 10, marginRight: 10, marginBottom: 0, backgroundColor: '#222831'}} title='Ver más' />  
+        </Card>
     </ScrollView>
   )
 }
@@ -70,9 +113,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   appText: {
-    color: '#222831',
-    paddingTop: 20,
-    paddingLeft: '20%',
+    color: '#105652',
+    fontWeight: '700',
+    fontSize: 20,
+    paddingTop: 50,
+    textAlign: "center",
   },
   appTitles: {
     backgroundColor: '#222831',
